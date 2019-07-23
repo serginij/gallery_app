@@ -1,6 +1,15 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack = require('webpack')
+const dotenv = require('dotenv')
+
+const env = dotenv.config().parsed
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next])
+  return prev
+}, {})
 
 module.exports = {
   entry: './src/index.js',
@@ -30,6 +39,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './public/index.html',
       title: 'Gallery app'
-    })
+    }),
+    new webpack.DefinePlugin(envKeys)
   ]
 }

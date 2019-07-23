@@ -15,6 +15,7 @@ const PageContainer = styled.section`
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  margin: 2em;
 `
 
 const Button = styled.button`
@@ -30,5 +31,5 @@ const Button = styled.button`
 `
 
 const CurrentPage = styled.p`
-  margin: 1em;
+  margin: 1.2rem;
 `

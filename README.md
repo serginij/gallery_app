@@ -8,4 +8,4 @@ https://pixabay.com/api/docs/
 
 ## Live sample
 
-https://gallery-app.now.sh/
+https://dist-eedifqpsgx.now.sh/
